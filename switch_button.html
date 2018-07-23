@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Switch Button</title>
+	<style>
+		body
+		{
+			margin:0;
+			padding: 0;
+			background: #ccc;
+		}
+		input[type="checkbox"]
+		{
+			width:80px;
+			height:40px;
+			position: absolute;
+			top:50%;
+			left:50%;
+			transform: translate(-50%,-50%);
+			-webkit-appearance:none;
+			background:rgba(150,150,150,1);
+			border-radius: 40px;
+			outline: none;
+			border: none;
+			transition: .5s;
+			box-shadow: inset 0px 0px 15px 0 rgba(0,0,0,0.5);
+		}
+		input[type="checkbox"]:checked
+		{
+			background: aqua;
+			box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+		}
+		input[type="checkbox"]:before
+		{
+			content: "";
+			width:40px;
+			height: 40px;
+			background: #fff;
+			position: absolute;
+			left: 0;
+			top: 0;
+			border-radius: 50%;
+			transition: .5s;
+			outline: none;
+			border: none;
+			transform: scale(1.1);
+			box-shadow: 0px 2px 15px 0 rgba(0,0,0,0.5);
+		}
+		input[type="checkbox"]:checked:before
+		{
+			left:40px;
+		}
+	</style>
+</head>
+<body>
+	<input type="checkbox">
+</body>
+</html>

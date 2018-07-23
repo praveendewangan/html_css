@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Menu Bar</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">-->
+	<link rel="stylesheet" href="fontawesome-free-5.1.0-web/css/all.css">
+	
+		<style>
+			body
+			{
+				margin:0;
+				padding:0;
+				font-family:sans-serif;
+			}
+			header
+			{
+				/*position:absolute;
+				top:0;
+				left:0;*/
+				padding:0 100px;
+				background:#262626;
+				width:100%;
+				box-sizing:border-box;
+			}
+			header:before,header:after
+			{
+				content:'';
+				posiyion:absolute;
+				top:0;
+				left:0;
+				color:#ccc;
+				clear:both;
+				display:block;
+			}
+			header .logo
+			{
+				color:white;
+				height:50px;
+				line-height:50px;
+				font-size:24px;
+				float:left;/*display:inline-block*/
+				font-weight:bold;
+			}
+			header nav
+			{
+				float:right;
+			}
+			header nav ul
+			{
+				margin:0;
+				padding:0;
+			}
+			header nav ul li
+			{
+				list-style:none;
+				/**/display:inline-block;
+				position:relative;
+			}
+			header nav ul li ul
+			{
+				position:absolute;
+				left:0;
+				background:#333;
+				display:none;
+			}
+			header nav ul li:hover ul
+			{
+				display:block;
+			}
+			header nav ul li ul li
+			{
+				display:block;
+				width:200px;
+			}
+			header nav ul li a
+			{
+				height:50px;
+				line-height:50px;
+				padding:0 25px;
+				color:#fff;
+				display:block;
+				text-decoration:none;
+			}
+			header nav ul li a:hover
+			{
+				color:#fff;
+				background:#f20938;
+			}
+			header nav ul li:hover
+			{
+				color:#fff;
+				background:#f20938;
+			}
+			header nav ul li ul li:hover
+			{
+				color:#fff;
+				background:#f20938;
+			}
+			.menu-toggle
+			{
+				color:#fff;
+				float:right;
+				line-height:50px;
+				font-size:24px;
+				cusor:pointer;
+				display:none;
+			}
+			
+			@media (max-width:991px)
+			{
+				header
+				{
+					padding:0 20px;
+				}
+				.menu-toggle
+				{
+					display:block;
+				}
+				header nav
+				{
+					/*display:none;*/
+					position:absolute;
+					width:100%;
+					background:#333;
+					top:50px;
+					left:-100%;
+					transition:.5s;
+				}
+				header nav.active
+				{
+					left:0;
+				}
+				header nav ul
+				{
+					display:block;
+					text-align:center;
+				}
+				header nav ul a
+				{
+					border-bottom:1px solid rgba(0,0,0,0.2);
+				}
+				header nav ul li ul
+				{
+					position:relative;
+					background:#003e6f;
+				}
+				header nav ul li ul li
+				{
+					width:100%;
+				}
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="logo">PRAVEEN</div>
+			<nav id="nav">
+				<ul class="menu">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li class="sub-menu"><a href="#">Services</a>
+						<ul>
+							<li><a href="#">Link1</a></li>
+							<li><a href="#">Link2</a></li>
+							<li><a href="#">Link3</a></li>
+							<li><a href="#">Link4</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Team</a></li>
+					<li class="sub-menu"><a href="#">Portfolio</a>
+						<ul>
+							<li><a href="#">Link1</a></li>
+							<li><a href="#">Link2</a></li>
+							<li><a href="#">Link3</a></li>
+							<li><a href="#">Link4</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+			<div class="menu-toggle" onclick="menu_toggle()">
+				<i class="fa fa-bars"></i>
+			</div>
+		</header>
+	</body>
+</html>
